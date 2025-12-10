@@ -4,32 +4,57 @@
   <meta charset="UTF-8">
   <title>Coming Soon</title>
 
-  <!-- Wichtig für iPhones -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
     body {
       margin: 0;
       padding: 0;
       background: #000;
-      text-align: center;
-      -webkit-text-size-adjust: 100%; /* verhindert iPhone-Autozoom */
     }
 
     img {
-      width: 100vw;       /* Bild nimmt volle Bildschirmbreite ein */
-      height: auto;       /* Bild bleibt korrekt proportional */
-      display: block;     
-      margin: 0;
-      padding: 0;
+      width: 100vw;
+      height: auto;
+      display: block;
+    }
+
+    /* Default = Laptop/Desktop */
+    .desktop {
+      display: block;
+    }
+
+    .mobile {
+      display: none;
+    }
+
+    /* iPhone / Mobile breakpoint */
+    @media (max-width: 600px) {
+      .desktop {
+        display: none;
+      }
+      .mobile {
+        display: block;
+      }
     }
   </style>
 </head>
 
 <body>
-  <img src="bild1.png" alt="">
-  <img src="bild1.2.png" alt="">
-  <img src="bild2.png" alt="">
-  <img src="bild3.png" alt="">
+
+  <!-- DESKTOP / LAPTOP BILDER -->
+  <img class="desktop" src="bild1.png" alt="">
+  <img class="desktop" src="bild1.2.png" alt="">
+  <img class="desktop" src="bild2.png" alt="">
+  <img class="desktop" src="bild3.png" alt="">
+
+  <!-- MOBILE / iPHONE BILDER -->
+  <img class="mobile" src="iphone1.png" alt="">
+  <img class="mobile" src="iphone2.png" alt="">
+  <img class="mobile" src="iphone3.png" alt="">
+  <img class="mobile" src="iphone4.png" alt="">
+  <img class="mobile" src="iphone5.png" alt="">
+  <img class="mobile" src="iphone6.png" alt="">
+
 </body>
 </html>
